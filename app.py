@@ -12,8 +12,7 @@ st.title("💬 Sentiment Dashboard")
 df = pd.read_csv("cleaned_1000.csv")
 
 # Fix date safely
-df["date"] = pd.to_datetime(df["date"], infer_datetime_format=True, errors="coerce")
-
+df["date"] = pd.to_datetime(df["date"], errors="coerce")
 # Drop rows where date failed to parse
 df = df.dropna(subset=["date"])
 
