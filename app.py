@@ -94,3 +94,4 @@ with tab3:
                       title="Sentiment by Month",
                       color_discrete_map=COLORS)
         st.plotly_chart(fig5)
+        # updated
