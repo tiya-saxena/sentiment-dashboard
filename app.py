@@ -24,7 +24,8 @@ with tab1:
     num_rows = st.slider("How many rows to show?",
                           min_value=10, max_value=len(df),
                           value=20, step=10)
-    st.dataframe(df[["text", "clean_text", "sentiment"]].head(num_rows))
+    display_df = df[["text", "clean_text", "sentiment"]].head(num_rows).reset_index(drop=True)
+st.dataframe(display_df, use_container_width=True)
 
 # ── Tab 2 ────────────────────────────────────────────
 with tab2:
